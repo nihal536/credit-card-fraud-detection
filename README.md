@@ -59,3 +59,6 @@ Credit_card_fraud_flask/
 ├── pyproject.toml
 ├── uv.lock
 └── .gitignore
+## Application Screenshot
+
+![Credit Card Fraud Detection Dashboard](screenshots/dashboard.png)
