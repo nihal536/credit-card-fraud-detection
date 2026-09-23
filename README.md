@@ -1,32 +1,61 @@
-# Stock Analysis Dashboard
+# Credit Card Fraud Detection System
 
-## Running Locally
+A machine learning-based web application for detecting potentially fraudulent credit card transactions using Python, Scikit-learn, and Flask.
 
-To run this app on your local machine:
+## Project Overview
 
-### Option 1: Simple Local Run
-```bash
-streamlit run app.py --server.address localhost --server.port 8501
-```
-Then open your browser to: `http://localhost:8501`
+This project uses machine learning classification models to predict whether a credit card transaction is fraudulent.
 
-### Option 2: Using the Python Runner
-```bash
-python run_local.py
-```
+The application provides a Flask-based web interface for:
 
-### Option 3: Default Streamlit (if you prefer default port)
-```bash
-streamlit run app.py
-```
-This will run on `http://localhost:8501` by default.
+- Training machine learning models
+- Predicting fraudulent transactions
+- Viewing data analysis
+- Comparing model performance
+- Visualizing results using interactive Plotly charts
 
-## For Replit Deployment
-The app is configured to run on `0.0.0.0:5000` for deployment, but for local development use `localhost:8501`.
+## Machine Learning Models
 
-## Features
-- Real-time stock data from Yahoo Finance
-- Interactive charts (candlestick, line, area)
-- Financial summary tables
-- CSV export functionality
-- Multiple time period analysis
+The project uses the following classification models:
+
+- Random Forest Classifier
+- Logistic Regression
+- Support Vector Machine (SVM)
+
+## Technologies Used
+
+- Python
+- Flask
+- Pandas
+- NumPy
+- Scikit-learn
+- Joblib
+- Plotly
+- HTML/CSS
+
+## Data Processing
+
+The application performs preprocessing on the transaction dataset, including:
+
+- Loading data from CSV
+- Cleaning column names
+- Encoding categorical features
+- Separating features and target variable
+- Splitting data into training and testing sets
+- Training multiple classification models
+
+## Project Structure
+
+```text
+Credit_card_fraud_flask/
+│
+├── templates/
+│   └── index.html
+│
+├── fraud_app.py
+├── fraud_data.csv
+├── requirements.txt
+├── README.md
+├── pyproject.toml
+├── uv.lock
+└── .gitignore
