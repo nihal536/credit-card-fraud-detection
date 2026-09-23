@@ -4,23 +4,54 @@ A machine learning-based web application for detecting potentially fraudulent cr
 
 ## Project Overview
 
-This project uses machine learning classification models to predict whether a credit card transaction is fraudulent.
+This project applies machine learning classification techniques to predict whether a credit card transaction is fraudulent.
 
-The application provides a Flask-based web interface for:
+The Flask web application provides functionality for:
 
-- Training machine learning models
-- Predicting fraudulent transactions
-- Viewing data analysis
-- Comparing model performance
-- Visualizing results using interactive Plotly charts
+- Training multiple machine learning models
+- Predicting individual transactions
+- Viewing transaction data analysis
+- Comparing model accuracy
+- Visualizing analysis and training results using Plotly
 
 ## Machine Learning Models
 
-The project uses the following classification models:
+The project uses three classification models:
 
 - Random Forest Classifier
 - Logistic Regression
 - Support Vector Machine (SVM)
+
+## Data Preprocessing
+
+The application performs the following preprocessing steps:
+
+- Loads transaction data from a CSV file
+- Cleans column names
+- Encodes categorical variables using LabelEncoder
+- Separates features and target variable
+- Splits the dataset into training and testing sets
+- Applies StandardScaler to Logistic Regression and SVM
+- Trains the classification models
+
+## Prediction
+
+The application can make a prediction for an individual transaction.
+
+For a selected model, the application returns:
+
+- Predicted transaction class
+- Prediction probability
+- Risk level: Low, Medium, or High
+
+## Data Analysis
+
+The application provides interactive visualizations including:
+
+- Fraudulent vs. legitimate transaction distribution
+- Transaction amount distribution by fraud status
+- Domestic vs. foreign transaction analysis
+- Model accuracy comparison
 
 ## Technologies Used
 
@@ -33,17 +64,6 @@ The project uses the following classification models:
 - Plotly
 - HTML/CSS
 
-## Data Processing
-
-The application performs preprocessing on the transaction dataset, including:
-
-- Loading data from CSV
-- Cleaning column names
-- Encoding categorical features
-- Separating features and target variable
-- Splitting data into training and testing sets
-- Training multiple classification models
-
 ## Project Structure
 
 ```text
@@ -52,6 +72,9 @@ Credit_card_fraud_flask/
 ├── templates/
 │   └── index.html
 │
+├── screenshots/
+│   └── dashboard.png
+│
 ├── fraud_app.py
 ├── fraud_data.csv
 ├── requirements.txt
@@ -59,6 +82,3 @@ Credit_card_fraud_flask/
 ├── pyproject.toml
 ├── uv.lock
 └── .gitignore
-## Application Screenshot
-
-![Credit Card Fraud Detection Dashboard](screenshots/dashboard.png)
